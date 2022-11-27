@@ -1,19 +1,27 @@
 import React from "react";
-
+import Pantalla from "./Pantalla";
 import style from "../css/Btn.css"
 import Btn from "./Btn"
+import { useState } from "react";
 
 const Teclado=()=>{
+    const [valor,setValor] = useState(0);
+    const onHandleClick=()=>{
+       console.log("dio click"); 
+    }
+    
     return(
+        <>
+        <Pantalla />
         <div>
             <div className="row">
-                <Btn numero="C" />
+                <Btn numero="C"  />
                 <Btn numero="()" />
                 <Btn numero="%" />
                 <Btn numero="/" />
             </div>
             <div className="row">
-                <Btn numero="7" />
+                <Btn numero="7" valor={valor} setValor={setValor}/>
                 <Btn numero="8" />
                 <Btn numero="9" />
                 <Btn numero="*" />
@@ -37,6 +45,7 @@ const Teclado=()=>{
                 <Btn numero="=" />
             </div>
         </div>
+        </>
     );
 };
 

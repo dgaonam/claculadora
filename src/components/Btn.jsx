@@ -1,11 +1,14 @@
 import React from "react";
 import style from "../css/Btn.css"
 
-const Btn =({numero})=>{
+const Btn =({numero,valor,setValor})=>{
+
+    const handleClick=(numero)=>{
+        console.log("funcion" + numero);
+    }
+
     return(
-        <>
-        <div className="column">{numero}</div>
-        </>
+        <div className="column" onClick={handleClick(numero)}>{numero}</div>
     );
 }
 

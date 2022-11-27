@@ -1,13 +1,17 @@
+import ValoresContext from "./context/ValoresContext";
 import Teclado from "./components/Teclado";
-import Pantalla from "./components/Pantalla";
-import { useState } from "react";
 
 function App() {
-  const [numero,setNumero] = useState(0);
+  const valoresData={
+    A:0,
+    B:0,
+    operacion:null
+  };
   return (
     <div className="App">
-      <Pantalla />
-      <Teclado />
+      <ValoresContext.Provider value={valoresData}>
+        <Teclado />
+      </ValoresContext.Provider>
     </div>
   );
 }

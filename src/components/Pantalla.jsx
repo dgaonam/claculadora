@@ -1,10 +1,10 @@
 import React from "react";
 import style from "../css/Btn.css"
 
-const Pantalla=()=>{
+const Pantalla=({valor})=>{
     return(
         <>
-        <div className="display">Pantalla</div>
+        <div className="display">{valor}</div>
         </>
     );
 };

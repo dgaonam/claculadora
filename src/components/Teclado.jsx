@@ -6,13 +6,12 @@ import { useState } from "react";
 
 const Teclado=()=>{
     const [valor,setValor] = useState(0);
-    const onHandleClick=()=>{
-       console.log("dio click"); 
-    }
     
     return(
         <>
-        <Pantalla />
+        
+        <Pantalla   valor={valor}/>
+
         <div>
             <div className="row">
                 <Btn numero="C"  />
@@ -21,26 +20,26 @@ const Teclado=()=>{
                 <Btn numero="/" />
             </div>
             <div className="row">
-                <Btn numero="7" valor={valor} setValor={setValor}/>
-                <Btn numero="8" />
-                <Btn numero="9" />
+                <Btn numero={7} valor={valor} setValor={setValor}/>
+                <Btn numero={8} valor={valor} setValor={setValor}/>
+                <Btn numero={9} valor={valor} setValor={setValor}/>
                 <Btn numero="*" />
             </div>
             <div className="row">
-                <Btn numero="4" />
-                <Btn numero="5" />
-                <Btn numero="6" />
+                <Btn numero={4} valor={valor} setValor={setValor}/>
+                <Btn numero={5} valor={valor} setValor={setValor}/>
+                <Btn numero={6} valor={valor} setValor={setValor}/>
                 <Btn numero="-" />
             </div>
             <div className="row">
-                <Btn numero="1" />
-                <Btn numero="2" />
-                <Btn numero="3" />
+                <Btn numero={1} valor={valor} setValor={setValor}/>
+                <Btn numero={2} valor={valor} setValor={setValor}/>
+                <Btn numero={3} valor={valor} setValor={setValor}/>
                 <Btn numero="+" />
             </div>
             <div className="row">
                 <Btn numero="+/-" />
-                <Btn numero="0" />
+                <Btn numero={0} valor={valor} setValor={setValor}/>
                 <Btn numero="." />
                 <Btn numero="=" />
             </div>

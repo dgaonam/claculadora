@@ -1,6 +1,8 @@
 import ValoresContext from "./context/ValoresContext";
 import Teclado from "./components/Teclado";
 
+import "./css/Btn.css"
+
 function App() {
   const valoresData={
     A:0,

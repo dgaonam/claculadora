@@ -5,7 +5,7 @@ const Pantalla=({valor})=>{
     const valores = useValores();
     return(
         <>
-        <div> {valores.A} {valores.operacion}</div>
+        <div className="operacion"> {valores.A} {valores.operacion}</div>
         <div className="display">{valor}</div>
         </>
     );  

@@ -5,6 +5,7 @@ function App() {
   const valoresData={
     A:0,
     B:0,
+    r:0,
     operacion:null
   };
   return (

@@ -28,14 +28,31 @@ const Btn =({numero,valor,setValor,teclaFuncion})=>{
                     setValor(0);
                 }
                 ejemplo.operacion="*";
-            }else if(numero==="="){
-                ejemplo.B=valor;
-                ejemplo.r=eval(parseInt(ejemplo.A) + ejemplo.operacion +parseInt(ejemplo.B));
-                setValor(ejemplo.r);
+            }else if(numero==="/"){
+                console.log("Division");
+                if(ejemplo.A===0){
+                    ejemplo.A=valor;
+                    setValor(0);
+                }
+                ejemplo.operacion="/";
+            }else if(numero==="C"){
+                setValor(0);
                 ejemplo.A=0;
+                ejemplo.A=0;
+                ejemplo.operacion=null
+            }else if(numero==="="){
+                if(valor===0){
+                    setValor("Error -- La division entre cero no esta definida --");
+                }else{
+                    ejemplo.B=valor;
+                    ejemplo.r=eval(parseInt(ejemplo.A) + ejemplo.operacion +parseInt(ejemplo.B));
+                    setValor(ejemplo.r);
+                    ejemplo.A=0;
+                    ejemplo.A=0;
+                    ejemplo.operacion=null
+                }
+                
             }
-
-            console.log("Tecla de funcion");
         }else{
             setValor(valor===0 ? numero : valor.toString() + numero);
         }
